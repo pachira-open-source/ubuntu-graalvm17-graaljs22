@@ -1,8 +1,8 @@
 FROM ubuntu:24.04
 
 ARG GRAALVM_VERSION=22.3.3
-ARG GRAALVM_INSTALLER=https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${GRAALVM_VERSION}/graalvm-ce-java17-linux-amd64-${GRAALVM_VERSION}.tar.gz
-ARG GRAALVM_DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/jdk-${GRAALVM_VERSION}/${GRAALVM_INSTALLER}
+ARG GRAALVM_INSTALLER=graalvm-ce-java17-linux-amd64-${GRAALVM_VERSION}.tar.gz
+ARG GRAALVM_DOWNLOAD_URL=https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-${GRAALVM_VERSION}/${GRAALVM_INSTALLER}
 ARG GRAALJS_INSTALLER=js-installable-svm-java17-linux-amd64-${GRAALVM_VERSION}.jar
 ARG GRAALJS_DOWNLOAD_URL=https://github.com/oracle/graaljs/releases/download/vm-${GRAALVM_VERSION}/${GRAALJS_INSTALLER}
 
