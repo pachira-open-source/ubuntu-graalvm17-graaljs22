@@ -22,7 +22,7 @@ RUN mkdir -p $GRAALVM_HOME \
     && curl -fsSL -o /tmp/${GRAALVM_INSTALLER} ${GRAALVM_DOWNLOAD_URL} \
     && curl -fsSL -o /tmp/${GRAALJS_INSTALLER} ${GRAALJS_DOWNLOAD_URL} \
     && tar -xzf /tmp/${GRAALVM_INSTALLER} -C $GRAALVM_HOME --strip-components=1 \
-    && chmod +x $GRAALVM_HOME/bin/*
+    && chmod +x $GRAALVM_HOME/bin/* \
     && $GRAALVM_HOME/bin/gu install --local-file /tmp/${GRAALJS_INSTALLER} \
     && rm -rf /tmp/${GRAALVM_INSTALLER} /tmp/${GRAALJS_INSTALLER} \
     && rm -rf /tmp/* /var/tmp/*
